@@ -20,12 +20,17 @@ public class NumberMagicEasy {
 		int num4 = theNumber(ans4);
 		int num5 = theNumber(ans5);
 		
+		int num6 = theNumber2(ans1);
+		int num7 = theNumber2(ans2);
+		int num8 = theNumber2(ans3);
+		int num9 = theNumber2(ans4);
+		int num10 = theNumber2(ans5);
 		
-		System.out.println("num1 = " + num1);
-		System.out.println("num2 = " + num2);
-		System.out.println("num3 = " + num3);
-		System.out.println("num4 = " + num4);
-		System.out.println("num5 = " + num5);
+		System.out.println("num6 = " + num6);
+		System.out.println("num7 = " + num7);
+		System.out.println("num8 = " + num8);
+		System.out.println("num9 = " + num9);
+		System.out.println("num10 = " + num10);
 	}
 	
 	public int theNumber(String answer) {
@@ -56,6 +61,29 @@ public class NumberMagicEasy {
 				return 'Y';
 		}
 		return 'N';
+	}
+	
+	public int theNumber2(String answer) {
+		String[] c = {
+			"YYYYYYYYNNNNNNNN",
+			"YYYYNNNNYYYYNNNN",
+			"YYNNYYNNYYNNYYNN",
+			"YNYNYNYNYNYNYNYN"
+		};
+		
+		for (int index = 0; index <= 15; index++) {
+			String temp = "";
+			for (int i = 0; i < 4; i++) {
+				temp += c[i].charAt(index);
+				
+				if (answer.equals(temp)) {
+					return index + 1;
+				}
+			}
+		}
+		
+		return 0;
+		
 	}
 	
 }
