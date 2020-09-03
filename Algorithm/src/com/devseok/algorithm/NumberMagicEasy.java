@@ -26,11 +26,24 @@ public class NumberMagicEasy {
 		int num9 = theNumber2(ans4);
 		int num10 = theNumber2(ans5);
 		
+		int num11 = theNumber3(ans1);
+		int num12 = theNumber3(ans2);
+		int num13 = theNumber3(ans3);
+		int num14 = theNumber3(ans4);
+		int num15 = theNumber3(ans5);
+		
 		System.out.println("num6 = " + num6);
 		System.out.println("num7 = " + num7);
 		System.out.println("num8 = " + num8);
 		System.out.println("num9 = " + num9);
 		System.out.println("num10 = " + num10);
+		
+		
+		System.out.println("num11 = " + num11);
+		System.out.println("num12 = " + num12);
+		System.out.println("num13 = " + num13);
+		System.out.println("num14 = " + num14);
+		System.out.println("num15 = " + num15);
 	}
 	
 	public int theNumber(String answer) {
@@ -84,6 +97,36 @@ public class NumberMagicEasy {
 		
 		return 0;
 		
+	}
+	
+	public int theNumber3(String answer) {
+		String[] c = {
+				"YYYY",
+				"YYYN",
+				"YYNY",
+				"YNYY",
+				"YNYN",
+				"YNNY",
+				"YNNN",
+				"NYYY",
+				"NYYN",
+				"NYNY",
+				"NYNN",
+				"NNYY",
+				"NNYN",
+				"NNNY",
+				"NNNN"
+		};
+		
+		
+		for (int index = 0; index <= 15; index++) {
+			if(answer.equals(c[index])) {
+				return index + 1;
+			}
+		}
+		
+		
+		return 0;
 	}
 	
 }
